@@ -41,11 +41,14 @@ class CitizensAdapter(list: ArrayList<Citizens>, requireContext: Context) :Recyc
     }
 
     override fun onBindViewHolder(holder: CitizensViewHolder, position: Int) {
+
+        val l=list[position]
+
         holder.apply {
 
-            tvName.text=list[position].lastName
-            tvName.text=list[position].name
-            tvPassNum.text=list[position].passNum
+            tvName.text="${l.lastName }${l.name}"
+
+            tvPassNum.text=l.passNum
 
             tvLLList.setOnClickListener {
 
