@@ -37,6 +37,10 @@
         <action
             android:id="@+id/action_all_to_info2"
             app:destination="@id/info2" />
+        <argument
+            android:name="Args"
+            app:argType="integer"
+            android:defaultValue="1" />
     </fragment>
     <fragment
         android:id="@+id/add2"

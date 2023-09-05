@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import uz.datatalim.password.R
@@ -54,11 +55,9 @@ class All : Fragment() {
         repository = CitizensRepository(requireActivity().application)
         adapter.submitList(list)
 
-        adapter.onClick={
+        adapter.onClick={position->
 
-
-            val info=Info()
-            info.findNavController().navigate(R.id.action_all_to_info2)
+            findNavController().navigate(R.id.action_all_to_info2, bundleOf("id" to list[position].id))
 
         }
 
