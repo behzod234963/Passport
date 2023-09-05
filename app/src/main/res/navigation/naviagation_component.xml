@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/naviagation_component"
+    app:startDestination="@id/splash">
+
+    <fragment
+        android:id="@+id/splash"
+        android:name="uz.datatalim.password.fragment.Splash"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splash_to_menu"
+            app:destination="@id/menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/menu"
+        android:name="uz.datatalim.password.fragment.Menu"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menu_to_all"
+            app:destination="@id/all" />
+        <action
+            android:id="@+id/action_menu_to_add2"
+            app:destination="@id/add2" />
+    </fragment>
+    <fragment
+        android:id="@+id/all"
+        android:name="uz.datatalim.password.fragment.All"
+        android:label="fragment_all"
+        tools:layout="@layout/fragment_all" >
+        <action
+            android:id="@+id/action_all_to_menu"
+            app:destination="@id/menu" />
+        <action
+            android:id="@+id/action_all_to_info2"
+            app:destination="@id/info2" />
+    </fragment>
+    <fragment
+        android:id="@+id/add2"
+        android:name="uz.datatalim.password.fragment.Add"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_add" >
+        <action
+            android:id="@+id/action_add2_to_menu"
+            app:destination="@id/menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/info2"
+        android:name="uz.datatalim.password.fragment.Info"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" />
+</navigation>

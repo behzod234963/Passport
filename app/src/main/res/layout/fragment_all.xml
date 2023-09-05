@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.All"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#4CAF50">
+            <Button
+                android:id="@+id/btnCancel_fr"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:drawableLeft="@drawable/pic_back"
+                android:drawableTint="@color/white"
+                android:background="@drawable/bg_button"
+                android:paddingLeft="5dp"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                app:backgroundTint="@null" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Fuqarolar ro'yhati"
+                android:textColor="@color/white"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"/>
+            <Button
+                android:id="@+id/btnSearch_fr"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:drawableLeft="@drawable/pic_search"
+                android:drawableTint="@color/white"
+                android:background="@drawable/bg_button"
+                android:paddingLeft="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_gravity="end"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                app:backgroundTint="@null" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvList_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"/>
+
+</LinearLayout>
