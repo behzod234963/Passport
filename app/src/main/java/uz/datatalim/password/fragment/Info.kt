@@ -30,6 +30,7 @@ class Info : Fragment() {
 
     private fun initView() {
 
+
         var id=0
 
 
