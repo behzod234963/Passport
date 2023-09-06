@@ -6,12 +6,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.navArgs
 import uz.datatalim.password.R
+import uz.datatalim.password.database.CitizensRepository
 import uz.datatalim.password.databinding.FragmentInfoBinding
 
 class Info : Fragment() {
 
+    val args:InfoArgs by navArgs()
     lateinit var binding: FragmentInfoBinding
+    var userId=1
+    lateinit var repository: CitizensRepository
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -30,9 +36,10 @@ class Info : Fragment() {
 
     private fun initView() {
 
-
-        var id=0
-
+        userId=args.id
+        repository=CitizensRepository(requireActivity().application)
+        val showInfo=repository.getPassById(userId)
+        binding.tvTextInfo.text=showInfo.toString()
 
     }
 
